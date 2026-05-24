@@ -14,8 +14,7 @@ A member uploads medical documents (PDFs / images), the system OCRs them, classi
 ## Deployed URL
 https://plumhq-euubaucde2rww9k4xypw4x.streamlit.app/
 
-'''Note: Scanned documents will not work as there is no binaries installed in streamlit cloud and also LLM API key is not configured,for such cases configure in local using the steps mentioned below '''
----
+Note: Scanned documents will not work as there is no binaries installed in streamlit cloud and also LLM API key is not configured,for such cases configure in local using the steps mentioned below
 
 ## Quickstart — clone & run locally
 
