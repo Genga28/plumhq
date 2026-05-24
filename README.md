@@ -1,14 +1,13 @@
 # Plum Claims — AI-driven health-insurance claims processor
 
-A multi-agent claims processing system built for the Plum AI Engineer assignment.
+A multi-agent claims processing system built that,
 Submits → verifies → extracts → decides → traces — with full observability.
 
 **Status:** 12 / 12 test cases passing (see `eval_report.md`).
 
 ---
 
-## What it does (one paragraph)
-
+## What it does 
 A member uploads medical documents (PDFs / images), the system OCRs them, classifies each document, runs them through a chain of agents (intake → verifier → quality → extractor → consistency → semantic → fraud → rules → reasoner → validator), and produces an APPROVED / PARTIAL / REJECTED / MANUAL_REVIEW / BLOCKED decision with a full agent-by-agent trace. Financial math is deterministic (Python rules engine); semantic understanding (diagnosis classification, line-item categorization, patient identity, reasoning prose) is delegated to Gemini, with deterministic fallbacks for every LLM call so the pipeline never blocks on LLM failure.
 
 ---
@@ -57,8 +56,7 @@ UPLOAD_DIR=uploads
   - Windows: <https://github.com/UB-Mannheim/tesseract/wiki> — installs to `C:\Program Files\Tesseract-OCR\tesseract.exe` by default
   - macOS: `brew install tesseract`
   - Linux: `apt-get install tesseract-ocr`
-- `GEMINI_MODEL` — defaults to `gemini-2.5-flash-lite`. If you hit free-tier quota, set this to `gemini-1.5-flash` or `gemini-2.0-flash-lite` — each model has its own quota pool. The wrapper also auto-falls-back to other models on 429.
-- **No quotes around the paths.** Windows-path escapes (`\T`, `\n`) get interpreted by python-dotenv if you quote them.
+- `GEMINI_MODEL` — defaults to `gemini-2.5-flash-lite`. 
 
 ### Run the app
 
@@ -78,14 +76,6 @@ Then in the UI:
 .venv\Scripts\python.exe eval.py
 # generates eval_report.md
 ```
-
-Optional flags:
-```bash
-.venv\Scripts\python.exe eval.py --cases TC004,TC010   # specific cases
-.venv\Scripts\python.exe eval.py --out my_report.md     # custom output
-```
-
----
 
 ## Repository layout
 
