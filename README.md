@@ -1,6 +1,6 @@
 # Plum Claims — AI-driven health-insurance claims processor
 
-A multi-agent claims processing system built for the Plum AI Engineer assignment.
+A multi-agent claims processing system built that,
 Submits → verifies → extracts → decides → traces — with full observability.
 
 **Status:** 12 / 12 test cases passing (see `eval_report.md`).
