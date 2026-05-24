@@ -7,8 +7,7 @@ Submits → verifies → extracts → decides → traces — with full observabi
 
 ---
 
-## What it does (one paragraph)
-
+## What it does 
 A member uploads medical documents (PDFs / images), the system OCRs them, classifies each document, runs them through a chain of agents (intake → verifier → quality → extractor → consistency → semantic → fraud → rules → reasoner → validator), and produces an APPROVED / PARTIAL / REJECTED / MANUAL_REVIEW / BLOCKED decision with a full agent-by-agent trace. Financial math is deterministic (Python rules engine); semantic understanding (diagnosis classification, line-item categorization, patient identity, reasoning prose) is delegated to Gemini, with deterministic fallbacks for every LLM call so the pipeline never blocks on LLM failure.
 
 ---
