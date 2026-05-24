@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from services import db, models, trace, ocr, llm, pipeline; print\\('imports ok'\\)\")",
+      "Bash(python -c \"from services.agents import base, intake, classifier, gates, extractor, semantic, fraud, rules, decision; print\\('agent imports ok'\\)\")",
+      "Bash(rm -f claims.db)",
+      "Bash(python eval.py --cases TC004 --out /tmp/eval_tc004.md)",
+      "Bash(pip install *)",
+      "Bash(python eval.py --out eval_report.md)",
+      "Bash(.venv/Scripts/python.exe -m pip install --upgrade pip)",
+      "Bash(.venv/Scripts/python.exe -m pip install -r requirements.txt)",
+      "Bash(where tesseract *)",
+      "Bash(powershell.exe -Command \"Get-Command tesseract -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(.venv/Scripts/python.exe eval.py)",
+      "Bash(.venv/Scripts/python.exe eval.py --cases TC010)",
+      "Bash(.venv/Scripts/python.exe eval.py --cases TC005)"
+    ]
+  }
+}
